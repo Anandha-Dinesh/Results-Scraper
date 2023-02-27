@@ -1,0 +1,252 @@
+regno : 5802651
+dob :13/01/2005
+
+KISHORE KUMAR B    ( 5802651 )
+Subject
+int
+Theory
+Pra
+Total
+Pass
+LANGUAGE
+010
+082
+  092
+  P
+ENGLISH
+010
+075
+  085
+  P
+PHYSICS
+010
+049
+020
+  079
+  P
+CHEMISTRY
+010
+051
+020
+  081
+  P
+COMPUTER SCIENCE
+010
+062
+020
+  092
+  P
+MATHEMATICS
+010
+079
+
+  089
+  P
+TOTAL 
+0518
+PASS
+
+
+
+
+regno : 5102692
+dob : 15/10/2004
+
+JAYACHANDRAN R    ( 5102692 )
+Subject 
+int     
+Theory  
+Pra     
+Total   
+Pass    
+LANGUAGE
+010     
+053     
+  063
+  P
+ENGLISH
+010
+079
+  089
+  P
+PHYSICS
+010
+048
+020
+  078
+  P
+CHEMISTRY
+010
+059
+020
+  089
+  P
+COMPUTER SCIENCE
+010
+056
+020
+  086
+  P
+MATHEMATICS
+010
+057
+
+  067
+  P
+TOTAL 
+0472
+PASS
+
+
+
+regno : 5802220
+dob : 30/07/2005
+
+ANITHA J    ( 5802220 )
+Subject
+int
+Theory
+Pra
+Total
+Pass
+LANGUAGE
+010
+082
+  092
+  P
+ENGLISH
+010
+048
+  058
+  P
+ECONOMICS
+010
+038
+
+  048
+  P
+COMMERCE
+010
+061
+
+  071
+  P
+ACCOUNTANCY
+010
+069
+
+  079
+  P
+BUSINESS MATHS & STA
+010
+062
+
+  072
+  P
+TOTAL 
+0420
+PASS
+
+
+
+regno : 5802219
+dob : 02/07/2005
+
+
+ANANDHI J    ( 5802219 )
+Subject
+int
+Theory
+Pra
+Total
+Pass
+LANGUAGE
+010
+083
+  093
+  P
+ENGLISH
+010
+052
+  062
+  P
+ECONOMICS
+010
+056
+
+  066
+  P
+COMMERCE
+010
+054
+
+  064
+  P
+ACCOUNTANCY
+010
+067
+
+  077
+  P
+BUSINESS MATHS & STA
+010
+049
+
+  059
+  P
+TOTAL 
+0421
+PASS
+
+
+
+
+regno : 5802228
+dob : 04/11/2004
+
+
+HEMA MALINI K    ( 5802228 )
+Subject
+int
+Theory
+Pra
+Total
+Pass
+LANGUAGE
+010
+072
+  082
+  P
+ENGLISH
+010
+057
+  067
+  P
+ECONOMICS
+010
+058
+
+  068
+  P
+COMMERCE
+010
+061
+
+  071
+  P
+ACCOUNTANCY
+010
+063
+
+  073
+  P
+BUSINESS MATHS & STA
+010
+038
+
+  048
+  P
+TOTAL 
+0409
+PASS
+
