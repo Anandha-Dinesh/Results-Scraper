@@ -1,4 +1,4 @@
-
+const puppeteer = require("puppeteer")
 
         const scrape = async () => {
 
@@ -14,20 +14,36 @@
             await page.type("#dob","04/11/2004")
             await page.click('input[type=submit]')
             
+            var dataarray=new Array();
             // let source = await page.content("b",{"waitUntil": "domcontentloaded"})
             const elements = await page.$$("b");
-            
-            elements.forEach(async element => {
+           
+            const dataarr = await Promise.all(elements.filter(async(element) =>{
+                if (element == '') {
+                    return true;
+                }
+                return false;
+            }) .map(async(element)=>{
                 const text = await (await element.getProperty("innerText")).jsonValue();
-                console.log(await text)
-                console.log( typeof text);
+                    return text;
+            }
+            
+            ));
+             Promise.all(dataarr).then(function() { console.log(dataarr) })
                 
-            });
+            
+            
             
             // await page.waitForTimeout(3000) // Wait for 3 seconds
             await browser.close() // Make sure to close the browser window
         }
         
+        scrape();
 
 
-        // const title = await page.evaluate{(el) => et.querySelector("h2 > a > span").textContent,producthandle}
+            //  elements.forEach(async element => {
+            //     const text = await (await element.getProperty("innerText")).jsonValue();
+            //     dataarr.push(await text)
+            //     // console.log(dataarr.length);
+            //     return dataarr;
+            // })
