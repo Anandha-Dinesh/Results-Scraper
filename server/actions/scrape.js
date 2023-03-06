@@ -38,7 +38,7 @@ const puppeteer = require("puppeteer")
             await browser.close() // Make sure to close the browser window
         }
         
-        scrape();
+        module.exports = scrape
 
 
             //  elements.forEach(async element => {
