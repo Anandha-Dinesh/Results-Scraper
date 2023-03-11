@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <style>
+    .assign {background-color: cyan;}
+    .colour{
+      background-color: blue;
+      height: 35px;
+      width: 50px;
+         
+         
+  }
+    .topnav {
+
+  background-color: darkblue;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav .assign {
+  float: right;
+  color: darkblue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: lightblue;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: black;
+  
+}
+  </style>
+  <div class="topnav">
+    <a class="active" href="#home">RESULT-SCRAPER</a>
+    <button class="assign">LOGIN</button>
+  </div>
+  <meta charset="UTF-8">
+  <title>CodePen - CSS Animated Background Landing Page</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <script>
+    const name = document.querySelector(".name");
+
+function changeColor(color) {
+   name.style.color = color;
+}
+  </script>
+<!-- partial:index.partial.html -->
+<div class="full-screen">
+  <div>
+
+    <h1>Landing Page</h1>
+    <br>
+    
+    <input type="file" id="fileupload"  accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+     <label class="glow-on-hover"for="fileupload">
+      <UploadFileTwoToneIcon /> &nbsp; Choose a file </label> 
+      <div>
+        <br> 
+      <button class="colour">10th</button>
+      <button class="colour">11th</button>
+      <button class="colour">12th</button>
+</div>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
