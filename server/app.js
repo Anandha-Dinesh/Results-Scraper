@@ -9,12 +9,14 @@ const PORT = 4000;
 
 app.use(fileupload()); 
 
+
 app.get("/",(req,res)=>{
     res.sendFile(__dirname+"/index.html");
-})
+});
 
-const file = require("./actions/manageFileUpload")
-app.post("/",manageFiles)
+app.post("/",manageFiles);
+
+
 
 
 
