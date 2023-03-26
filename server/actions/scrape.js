@@ -1,16 +1,18 @@
 const puppeteer = require("puppeteer");
-const writedata = require("./writedata")
 
-const scrape = async (regno,dob) => {            
-    const browser = await puppeteer.launch({
-        headless: true 
+
+const scrape =  
+    async (regno,dob) => { 
+     
+        const browser = await puppeteer.launch({
+        headless: false 
     })
     const page = await browser.newPage()
    
     await page.goto("https://tnresults.nic.in/acpter.htm")
     await page.waitForSelector("#regno")
-    await page.type("#regno","5802220")
-    await page.type("#dob","30/07/2005")
+    await page.type("#regno",regno)
+    await page.type("#dob",dob)
     await page.click('input[type=submit]')
             
     const elements = await page.$$("b");
@@ -29,13 +31,16 @@ const scrape = async (regno,dob) => {
         ));
         Promise.all(dataarr)
             .then(function() {
-                console.log(dataarr);
-                
                 return dataarr
                 })
             await browser.close();
-         }
-scrape();
+            return dataarr
+        
+}
+    
+    
+
+
 module.exports=scrape;
 
 

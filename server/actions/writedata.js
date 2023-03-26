@@ -44,40 +44,36 @@ let datas =[
     '0420',
     'PASS'
   ]
-  
-const { writeXLSX } = require("xlsx");
-const objects= require("./objects");
 
 
 
-const writedata = async(data) =>{
-    var excelarray=[];
+
+
+const writedata = 
+      (data) =>{
+    //var excelarray=[];
     // if (_)     
-    
-    // {
-          
-    
-    
-    
+    // {   
     if(data[29]=="COMPUTER SCIENCE"){
-            var cs_exceldata=[
-            data[10],
-            data[15],
-            "",
-            data[32],
-            data[21],
-            data[27],
-            data[38],
-            "",
-            "",
-            "",
-            "",
+            let cs_mark= [
+                data[10],
+                data[15],
+                "",
+                data[32],
+                data[21],
+                data[27],
+                data[38],
+                "",
+                "",
+                "",
+                "",
             ]
-            excelarray.push(cs_exceldata);
+            // excelarray.push(cs_exceldata);
+            return cs_mark;
         }
     
         if(data[29]=="BIOLOGY"){
-            let bio_exceldata=[
+            let bio_mark=[
             data[10],
             data[15],
             data[21],
@@ -85,11 +81,12 @@ const writedata = async(data) =>{
             data[32],
             data[38],
             ]
-            excelarray.push(bio_exceldata);
+            //excelarray.push(bio_exceldata);
+            return bio_mark;
         }
 
         if(data[29]=="ACCOUNTANCY"){
-            let com_exceldata=[
+            let com_mark=[
             data[10],
             data[15],
             "",
@@ -103,23 +100,24 @@ const writedata = async(data) =>{
             data[39],
             data[42]
             ]
-            excelarray.push(com_exceldata);
+            //excelarray.push(com_exceldata);
+            return com_mark;
         }
     //};
 
     //if (_) {
 
-            var sslc_exceldata=[
-            data[10],
-            data[15],
-            data[21],
-            data[27],
-            data[32],
-            ]
-            excelarray.push(sslc_exceldata);
-        
-    // }
-    console.log(excelarray);
-}
+    //         var sslc_mark=[
+    //         data[10],
+    //         data[15],
+    //         data[21],
+    //         data[27],
+    //         data[32],
+    //         ]
+    //         excelarray.push(sslc_exceldata);
+                //return  sslc_mark
+    // // }
+    // console.log(excelarray);
+    }
 
-writedata(datas);
+module.exports = writedata;
