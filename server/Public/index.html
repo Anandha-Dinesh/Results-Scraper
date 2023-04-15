@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results-Scraper</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="full-screen">
+        <div>
+            <div>
+                <h1>RESULTS-SCRAPER</h1>
+            </div>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <div class="file">
+                    <input type="file" id="fileupload" name="foo" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                    <label class="glow-on-hover" for="fileupload">
+                        Choose a file 
+                    </label>
+                    <button type="submit" id="submit"></button>
+                    <label for="submit" class="gear" id="gear" onclick="rotateImage()" > <img src="./images/gearwheel.png" alt="Start" class="gear-img"  onclick="spinwheel"></label> 
+                </div>
+                
+                <div class="radio-toolbar">
+                    <input type="radio" id="sslc" name="category" value="1" >
+                    <label for="sslc">10th</label>
+                
+                    <input type="radio" id="hsc1" name="category" value="2">
+                    <label for="hsc1"> 11th</label>
+                
+                    <input type="radio" id="hsc2" name="category" value="3">
+                    <label for="hsc2">12th</label> 
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="instructions">
+        
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>

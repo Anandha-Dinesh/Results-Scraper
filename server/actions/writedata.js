@@ -43,19 +43,17 @@ let datas =[
     'TOTAL',
     '0420',
     'PASS'
-  ]
+]
 
 
 
-
-
-const writedata = 
-      (data) =>{
-    //var excelarray=[];
-    // if (_)     
-    // {   
-    if(data[29]=="COMPUTER SCIENCE"){
+const writedata = (data,category,regno,dob) =>{
+     
+    if(category=="2" || "3"){
+        if(data[29]=="COMPUTER SCIENCE"){
             let cs_mark= [
+                regno,
+                dob,
                 data[10],
                 data[15],
                 "",
@@ -68,56 +66,74 @@ const writedata =
                 "",
                 "",
             ]
-            // excelarray.push(cs_exceldata);
             return cs_mark;
         }
     
         if(data[29]=="BIOLOGY"){
             let bio_mark=[
-            data[10],
-            data[15],
-            data[21],
-            data[27],
-            data[32],
-            data[38],
+                regno,
+                dob,
+                data[10],
+                data[15],
+                data[21],
+                data[27],
+                data[32],
+                data[38],
             ]
-            //excelarray.push(bio_exceldata);
             return bio_mark;
         }
 
         if(data[29]=="ACCOUNTANCY"){
             let com_mark=[
-            data[10],
-            data[15],
-            "",
-            "",
-            "",
-            "",
-            "",
-            data[21],
-            data[27],
-            data[33],
-            data[39],
-            data[42]
+                regno,
+                dob,
+                data[10],
+                data[15],
+                "",
+                "",
+                "",
+                "",
+                "",
+                data[21],
+                data[27],
+                data[33],
+                data[39],
+                data[42]
             ]
-            //excelarray.push(com_exceldata);
             return com_mark;
         }
-    //};
 
-    //if (_) {
-
-    //         var sslc_mark=[
-    //         data[10],
-    //         data[15],
-    //         data[21],
-    //         data[27],
-    //         data[32],
-    //         ]
-    //         excelarray.push(sslc_exceldata);
-                //return  sslc_mark
-    // // }
-    // console.log(excelarray);
+        if (data=="noData") {
+            let fillNull =[
+                regno,
+                dob,
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+            ]
+            return fillNull;
+        }
     }
 
+    if (category=="1") {
+            var sslc_mark=[
+                regno,
+                dob,
+                data[10],
+                data[15],
+                data[21],
+                data[27],
+                data[32],
+            ]
+            return  sslc_mark;
+    }
+}
 module.exports = writedata;
