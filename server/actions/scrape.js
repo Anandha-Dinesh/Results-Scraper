@@ -3,22 +3,7 @@ const puppeteer = require("puppeteer");
 
 const scrape =  
     async (regno,dob,category) => {
-        const grade = {
-            1:"https://tnresults.nic.in/arcxrs.htm",
-            2:"https://tnresults.nic.in/acpqrfy.htm",
-            3:"https://tnresults.nic.in/acpter.htm"
-        }
-        // switch zz(category) {
-        //     case 1:
-        //         URL="https://tnresults.nic.in/arcxrs.htm"
-        //         break;
-        //     case 2:
-        //         URL="https://tnresults.nic.in/acpqrfy.htm"
-        //         break;
-        //     case 3:  
-        //         URL="https://tnresults.nic.in/acpter.htm"
-        //         break;
-        // }
+        
         let browser
         if(!browser) browser = await puppeteer.launch({
         headless: false 
