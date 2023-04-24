@@ -15,6 +15,25 @@ app.get("/",(req,res)=>{
 
 app.post("/",manageFiles);
 
+app.get("/Download",(req,res)=>{
+    res.sendFile(__dirname+"/Public/outputpage.html");
+});
+
+app.get("/Download:result.xlsx",(req,res) =>{
+   
+    const filePath = __dirname + "/Finaloutput.xlsx" ;
+    res.download(
+        filePath, 
+        "Result.xlsx", // Remember to include file extension
+        (err) => {
+            if (err) {
+                res.send({
+                    error : err,
+                    msg   : "Problem downloading the file"
+                })
+            }
+    });
+});
 
 app.listen(PORT,() =>{
     console.log(`server is running at port ${PORT}.... `);

@@ -37,6 +37,7 @@ const manageFiles = async(req,res)=>{
               
                 let excel_dataarr =[];
                 let dob,regno;
+                let flag = 1;
 
                 ( async () => {
                 const recur = async () => {
@@ -57,6 +58,10 @@ const manageFiles = async(req,res)=>{
                                 });
                                 console.log(data);
                                 let dataarr = await writedata(data,info.class,regno,dob);
+                                if(flag){
+                                    excel_dataarr.push(["Register No","DOB","Lang","Eng","Bio","CS","Phy","Che","Maths","Eco","Comm","Acc","BM","Total"]);
+                                    flag = 0;
+                                }
                                 excel_dataarr.push(dataarr);
                                 console.log(`${i-1} is DONE..`); 
                             }
