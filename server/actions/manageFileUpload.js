@@ -51,12 +51,8 @@ const manageFiles = async(req,res)=>{
                             regno = regno_xl.toString()
                             
                             if(regno.length===7 && dob.length===10){
-                                let data = await scrape(regno, dob,info.class,(err)=>{
-                                    if (err){
-                                        scrape(regno,dob,info.class)
-                                    }
-                                });
-                                console.log(data);
+                                let data = await scrape(regno, dob,info.class);
+                                
                                 let dataarr = await writedata(data,info.class,regno,dob);
                                 if(flag){
                                     excel_dataarr.push(["Register No","DOB","Lang","Eng","Bio","CS","Phy","Che","Maths","Eco","Comm","Acc","BM","Total"]);
